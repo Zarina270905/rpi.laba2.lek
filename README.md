@@ -1,70 +1,79 @@
-# Getting Started with Create React App
+# УчПлатформа — учебная платформа на React
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Лабораторная работа №3 по дисциплине РПИ.
 
-## Available Scripts
+Учебная платформа соединяет компании, образовательные учреждения и НКО
+с профессиональными лекторами, спикерами и тренерами.
 
-In the project directory, you can run:
+##  Запуск проекта
 
-### `npm start`
+```bash
+npm install
+npm start
+```
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+Открой [http://localhost:3000](http://localhost:3000) в браузере.
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+##  Стек
 
-### `npm test`
+- **React 18** (Create React App)
+- **React Hooks** (useState) — без сторонних библиотек роутинга
+- **CSS3** — без UI-фреймворков
+- **Google Fonts**: Inter, Playfair Display
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+##  Структура проекта
 
-### `npm run build`
+```
+laba2/
+├── public/
+│   ├── logos/              
+│   ├── teachers/           
+│   └── index.html
+├── src/
+│   ├── components/         
+│   ├── pages/              
+│   ├── data/               
+│   ├── styles/             
+│   ├── App.jsx
+│   └── index.js
+└── package.json
+```
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+##  Страницы
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+| Страница | Содержимое |
+|---|---|
+| **Главная** | Hero, блок лекторов, О нас, Партнёры, превью лекторов |
+| **Партнёры** | ICL, Татнефть (кликабельные ссылки) |
+| **О нас** | Преимущества (01/02/03), миссия |
+| **Лекторы** | Сетка 10 лекторов + поиск + фильтр по полу |
+| **Карточка лектора** | Дисциплины (аккордеоны), тарифы, кнопка записи |
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+##  Функциональность
 
-### `npm run eject`
+- Навигация через `useState` (без react-router)
+- Модальные окна:
+  - **«Оставить заявку»** — в хедере
+  - **«Записаться на занятие»** — на странице лектора
+- Валидация форм: имя, телефон, email, дисциплина/тариф
+- Якорные ссылки с плавным скроллом (Партнёры, О нас)
+- Аккордеоны дисциплин (10 тем на дисциплину)
+- Адаптивная вёрстка (десктоп / планшет / мобильный)
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+##  Дизайн
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- Градиентный хедер
+- Два шрифта: **Inter** (интерфейс) + **Playfair Display** (заголовки)
+- Синий акцент `#2400ff`
+- Светлые фоны секций
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+##  Контент
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- **10 преподавателей** (5 мужчин, 5 женщин) с дисциплинами и тарифами из методички
+- **2 партнёра** (ICL, Татнефть) с описаниями
+- **3 тарифа** у каждого преподавателя
 
-## Learn More
+##  Автор
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+**Савотченко Софья Алексеевна**  
+Лабораторная работа №3, РПИ
